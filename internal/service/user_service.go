@@ -39,7 +39,7 @@ func AddUser(email string, password string) error {
 	// Попытка добавить пользователя в базу
 	err := userRepository.AddUser(email, password)
 	if err != nil {
-		return errors.New("ошибка добавления пользователя в базу данных: " + err.Error())
+		return errors.New(err.Error())
 	}
 
 	return nil
